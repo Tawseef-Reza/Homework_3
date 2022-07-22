@@ -32,7 +32,7 @@ public class Problem_4 : MonoBehaviour
         {
             print(i);
         }
-        //print array out
+        //printing array out
         foreach (int i in halfList)
         {
             print(i);
