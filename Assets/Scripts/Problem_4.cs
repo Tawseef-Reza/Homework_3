@@ -11,5 +11,31 @@ public class Problem_4 : MonoBehaviour
     */
     void Start()
     {
+        List<int> divisibleBy7 = new List<int>();
+        for (int i = 1; i <= 144; i+=2)
+        {
+            if (i % 7 == 0)
+            {
+                divisibleBy7.Add(i);
+            }
+        }
+        int[] halfList = new int[divisibleBy7.Count / 2];
+        int arrayIndex = 0; // arrayIndex represents index number of array
+        for (int i = 0; i < divisibleBy7.Count; i+=2) // i represents index number of list
+        {
+            halfList[arrayIndex] = divisibleBy7[i];
+            arrayIndex++;
+        }
+        
+        //printing list out
+        foreach (int i in divisibleBy7)
+        {
+            print(i);
+        }
+        //print array out
+        foreach (int i in halfList)
+        {
+            print(i);
+        }
     }
 }

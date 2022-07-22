@@ -11,6 +11,24 @@ public class Problem_2 : MonoBehaviour
     void Start()
     {
         int[] disorder = new int[3]{0,5,2};
-        bool isInOrder;
+        
+        bool isInOrder = true; // set to true initially
+        
+        for (int i = 1; i < disorder.Length; i++) // i is equal to 1 because I dont want
+                                                  // to start at the beginning since there
+                                                  // is nothing to compare at the beginning
+        {
+            if (disorder[i] >= disorder[i-1])
+            {
+                isInOrder = true;
+            }
+            else
+            {
+                isInOrder = false;
+                break;
+            }
+        }
+        print(isInOrder);
+
     }
 }
